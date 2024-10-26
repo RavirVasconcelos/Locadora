@@ -17,7 +17,8 @@ namespace Locadora
         }
         public override string ToString()
         {
-            return Nome +
+            return "Filmes " +
+                Nome +
                 ", " + Genero +
                 ", $ " + Valor.ToString("F2", CultureInfo.InvariantCulture);
         }

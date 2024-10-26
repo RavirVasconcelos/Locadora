@@ -4,11 +4,9 @@ using System.Collections.Generic;
 
 namespace Locadora
 {
-
-    public class Serie : Locadora
+    public class Livro : Locadora
     {
-
-        public Serie(string nome, string genero, double valor)
+        public Livro(string nome, string genero, double valor)
         {
 
             Nome = nome;
@@ -18,7 +16,7 @@ namespace Locadora
         }
         public override string ToString()
         {
-            return "Series " +
+            return "Livros " + 
                 Nome +
                 ", " + Genero +
                 ", $ " + Valor.ToString("F2", CultureInfo.InvariantCulture);

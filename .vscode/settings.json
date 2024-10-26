@@ -1,0 +1,5 @@
+{
+    "dotnetAcquisitionExtension.allowInvalidPaths": true,
+    "dotnetAcquisitionExtension.enablePreviewFeatures": true,
+    "dotnet.inlayHints.enableInlayHintsForIndexerParameters": false
+}
