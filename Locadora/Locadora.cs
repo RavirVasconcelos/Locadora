@@ -10,6 +10,7 @@ namespace Locadora
         public string Nome { get; set; }
         public string Genero { get; set; }
         public double Valor { get; set; }
+        public int Id { get; set; }
 
     }
 

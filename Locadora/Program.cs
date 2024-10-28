@@ -46,8 +46,10 @@ namespace Locadora
                         string genero = Console.ReadLine();
                         Console.Write("Valor do Filme: ");
                         double valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                        Console.Write("ID do Filme: ");
+                        int id = int.Parse(Console.ReadLine());
 
-                        catalog.Add(new Filme(nome, genero, valor));
+                        catalog.Add(new Filme(nome, genero, valor, id));
                         Console.WriteLine();
 
                         Console.Clear();
@@ -71,8 +73,10 @@ namespace Locadora
                         string genero = Console.ReadLine();
                         Console.Write("Valor da Serie: ");
                         double valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                        Console.Write("ID da Serie: ");
+                        int id = int.Parse(Console.ReadLine());
 
-                        catalog.Add(new Serie(nome, genero, valor));
+                        catalog.Add(new Serie(nome, genero, valor, id));
                         Console.WriteLine();
 
                         Console.Clear();
@@ -89,14 +93,16 @@ namespace Locadora
                     }
                     for (int i = 1; i <= qtd; i++)
                     {
-                        Console.Write("Nome da Livro: ");
+                        Console.Write("Nome do Livro: ");
                         string nome = Console.ReadLine();
                         Console.Write("Gênero do Livro: ");
                         string genero = Console.ReadLine();
-                        Console.Write("Valor da Livro: ");
+                        Console.Write("Valor do Livro: ");
                         double valor = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+                        Console.Write("ID do Livro: ");
+                        int id = int.Parse(Console.ReadLine());
 
-                        catalog.Add(new Livro(nome, genero, valor));
+                        catalog.Add(new Livro(nome, genero, valor, id));
                         Console.WriteLine();
 
                         Console.Clear();
@@ -107,6 +113,14 @@ namespace Locadora
                 continuar = Console.ReadLine().ToLower() == "s";
 
                 Console.Clear();
+            }
+            
+            Console.Write("Digite o ID para pesquisar o produto: ");
+            int searchId = int.Parse(Console.ReadLine());
+
+            foreach (var id in catalog)
+            {
+                Console.WriteLine(id);
             }
             foreach (Locadora obj in catalog)
             {
